@@ -1,0 +1,44 @@
+@import "./src/utilties/breakpoints";
+
+header {
+  background: #081C24;
+  padding: 1.5rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    .brand {
+      padding-left: 0;
+      padding-right: 0;
+      a {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  nav {
+    a {
+      color: pink;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-sm){
+  header {
+    .container {
+      flex-direction: row;
+      max-width: 1280px;
+      .brand {
+        a {
+          padding-bottom: 0;
+          color: pink;
+        }
+      }
+    }
+  }
+
+}
+
