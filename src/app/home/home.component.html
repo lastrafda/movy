@@ -1,7 +1,5 @@
-<p>home works!</p>
-
 <div class="main-carousel">
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
+  <div class="carousel-cell" *ngFor="let trend of trends.slice(0,5)">
+    <img [src]="trend.backdrop_path | backdropImage:getBackDropSizes().Big" alt="fixed alt por ahora">
+  </div>
 </div>
