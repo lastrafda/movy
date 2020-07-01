@@ -126,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "movy"
+    }
+  },
+  "defaultProject": "movy",
+  "cli": {
+    "analytics": false
+  }
 }
