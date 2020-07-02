@@ -15,7 +15,7 @@ export class HomeService {
   }
 
   getTrends(): Observable<ITrendResponse>{
-    return this.http.get<ITrendResponse>(`${this.baseUrl}trending/all/week?api_key=${environment.movieAPIKey}`)
+    return this.http.get<ITrendResponse>(`${this.baseUrl}trending/movie/week?api_key=${environment.movieAPIKey}`)
       .pipe(catchError(this.handleError));
   }
 
