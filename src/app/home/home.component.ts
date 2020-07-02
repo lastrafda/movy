@@ -3,6 +3,7 @@ import {HomeService} from './home.service';
 import {ITrend, ITrendResponse} from '../shared/models/trend.model';
 import {BackdropSizes} from '../shared/enums/backdrop-sizes.enum';
 import {ActivatedRoute} from '@angular/router';
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-home',
@@ -17,8 +18,8 @@ export class HomeComponent implements AfterViewInit{
     this.trends = this.route.snapshot.data.trends;
   }
 
-  getBackDropSizes(){
-    return BackdropSizes;
+  getBackDropBase(){
+    return `${environment.movieIMGURL}${BackdropSizes.Medium}`;
   }
 
   ngAfterViewInit(): void {
@@ -28,6 +29,7 @@ export class HomeComponent implements AfterViewInit{
       cellAlign: 'left',
       contain: true,
       wrapAround: true,
+      autoPlay: 5000,
     });
   }
 }

@@ -1,5 +1,15 @@
 <div class="main-carousel">
   <div class="carousel-cell" *ngFor="let trend of trends.slice(0,5)">
-    <img [src]="trend.backdrop_path | backdropImage:getBackDropSizes().Big" alt="fixed alt por ahora">
+    <img [srcset]="trend.backdrop_path | backdropImage"
+         [src]="getBackDropBase() + trend.backdrop_path" alt="fixed alt por ahora">
+    <div class="centered">
+        <h2>{{trend.title}}</h2>
+        <p><img class="star-score" src="/assets/img/star.png" alt="score">{{trend.vote_average}}</p>
+        <p>{{trend.release_date}}</p>
+        <div class="carousel-buttons">
+          <button type="button" class="btn-primary">Watch</button>
+          <button type="button" class="btn-primary">Save</button>
+        </div>
+    </div>
   </div>
 </div>
