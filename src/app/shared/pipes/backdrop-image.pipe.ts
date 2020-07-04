@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import {environment} from '../../../environments/environment';
-import {BackdropSizes} from '../enums/backdrop-sizes.enum';
 
 @Pipe({
   name: 'backdropImage'
