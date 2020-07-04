@@ -4,6 +4,7 @@ import {Observable, of, throwError} from 'rxjs';
 import { IError, ITrendResponse } from '../shared/models/trend.model';
 import { environment } from '../../environments/environment';
 import { catchError } from 'rxjs/operators';
+import {IPopularMovieResponse} from "../shared/models/popular.model";
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,11 @@ export class HomeService {
 
   getTrends(): Observable<ITrendResponse>{
     return this.http.get<ITrendResponse>(`${this.baseUrl}trending/movie/week?api_key=${environment.movieAPIKey}`)
+      .pipe(catchError(this.handleError));
+  }
+
+  getPopularMovies(): Observable<IPopularMovieResponse>{
+    return this.http.get<IPopularMovieResponse>(`${this.baseUrl}movie/popular?language=en-US&api_key=${environment.movieAPIKey}`)
       .pipe(catchError(this.handleError));
   }
 

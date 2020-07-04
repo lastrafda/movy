@@ -12,7 +12,6 @@ import {SharedModule} from '../shared/shared.module';
 @NgModule({
   declarations: [
     HomeComponent,
-    BackdropImagePipe,
     TrendsCarouselComponent
   ],
   imports: [

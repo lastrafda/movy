@@ -3,5 +3,5 @@
 </section>
 <section class="popular">
   <h3>Popular Movies</h3>
- <app-grid></app-grid>
+  <app-grid [popularMovies]="popularMovies" *ngIf="popularMovies"></app-grid>
 </section>
