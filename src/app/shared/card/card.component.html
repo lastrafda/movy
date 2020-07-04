@@ -1,16 +1,21 @@
-<div class="card">
+<div class="card" *ngIf="movie">
   <div class="poster">
-    <img [src]="'https://image.tmdb.org/t/p/w342/oyG9TL7FcRP4EZ9Vid6uKzwdndz.jpg'" alt="una wea">
+    <img [src]="movie.poster_path | posterImage" [alt]="'poster of ' + movie.title">
   </div>
   <div class="title">
-    Un peli bkn
+    {{movie.title}}
   </div>
   <div class="info">
     <div>
-      2020
+      {{movie.release_date}}
     </div>
     <div>
-      hearth  watch start 9.9
+      <fa-icon [icon]="fasHeart" class="icon is-liked" (click)="isLiked = !isLiked" [hidden]="!isLiked"></fa-icon>
+      <fa-icon [icon]="farHeart" class="icon"  (click)="isLiked = !isLiked" [hidden]="isLiked"></fa-icon>
+      <fa-icon [icon]="faCheck" class="icon" (click)="isInWatchList = !isInWatchList" [hidden]="!isInWatchList"></fa-icon>
+      <fa-icon [icon]="fasClock" class="icon" (click)="isInWatchList = !isInWatchList" [hidden]="isInWatchList"></fa-icon>
+      <fa-icon [icon]="faStar" class="icon star-icon"></fa-icon>
+      {{movie.vote_average}}
     </div>
   </div>
 </div>

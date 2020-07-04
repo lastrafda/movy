@@ -1,7 +1,3 @@
 <div class="grid">
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
+  <app-card [movie]="movie"  *ngFor="let movie of popularMovies"></app-card>
 </div>

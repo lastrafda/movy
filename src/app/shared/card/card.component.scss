@@ -18,9 +18,14 @@
     padding-bottom: 8px;
     color: #FFFFFF;
     font-size: 20px;
+    max-height: 72px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .info {
     display: flex;
     justify-content: space-between;
+    color: #FFFFFF;
   }
 }
