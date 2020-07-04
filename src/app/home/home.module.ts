@@ -5,6 +5,7 @@ import { HomeComponent } from './home.component';
 import { BackdropImagePipe } from '../shared/pipes/backdrop-image.pipe';
 import { TrendsResolver } from './trends.resolver';
 import { TrendsCarouselComponent } from './trends-carousel/trends-carousel.component';
+import {SharedModule} from '../shared/shared.module';
 
 
 
@@ -16,7 +17,8 @@ import { TrendsCarouselComponent } from './trends-carousel/trends-carousel.compo
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SharedModule
   ],
   providers: [
     TrendsResolver
