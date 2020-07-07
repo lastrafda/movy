@@ -1,4 +1,4 @@
-<div class="main-carousel">
+<div class="main-carousel container">
   <div class="carousel-cell" *ngFor="let trend of trends.slice(0,5)">
     <img [srcset]="trend.backdrop_path | backdropImage"
          [src]="getBackDropBase() + trend.backdrop_path" alt="fixed alt por ahora">
