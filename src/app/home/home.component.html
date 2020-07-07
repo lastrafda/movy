@@ -2,6 +2,8 @@
   <app-trends-carousel [trends]="trends.slice(0,5)"></app-trends-carousel>
 </section>
 <section class="popular">
-  <h3>Popular Movies</h3>
-  <app-grid [popularMovies]="popularMovies" *ngIf="popularMovies"></app-grid>
+  <div class="container">
+    <h3>Popular Movies</h3>
+    <app-grid [popularMovies]="popularMovies" *ngIf="popularMovies"></app-grid>
+  </div>
 </section>
