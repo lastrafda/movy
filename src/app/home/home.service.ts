@@ -4,7 +4,7 @@ import {Observable, of, throwError} from 'rxjs';
 import { IError, ITrendResponse } from '../shared/models/trend.model';
 import { environment } from '../../environments/environment';
 import { catchError } from 'rxjs/operators';
-import {IPopularMovieResponse} from "../shared/models/popular.model";
+import {IPopularMovieResponse} from '../shared/models/popular.model';
 
 @Injectable({
   providedIn: 'root'
