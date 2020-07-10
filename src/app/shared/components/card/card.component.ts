@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {IPopularMovie} from '../models/popular.model';
+import {IPopularMovie} from '../../models/popular.model';
 import {faHeart as fasHeart} from '@fortawesome/free-solid-svg-icons/faHeart';
 import {faHeart as farHeart} from '@fortawesome/free-regular-svg-icons/faHeart';
 import {faClock as fasClock} from '@fortawesome/free-solid-svg-icons/faClock';

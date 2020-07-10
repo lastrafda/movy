@@ -1,0 +1,10 @@
+.filtering {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 16px 16px;
+  label {
+    color: #f48ea0;
+    padding-bottom: 4px;
+  }
+}
