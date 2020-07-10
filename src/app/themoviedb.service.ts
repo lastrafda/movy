@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable, of, throwError} from 'rxjs';
-import { IError, ITrendResponse } from '../shared/models/trend.model';
-import { environment } from '../../environments/environment';
+import { IError, ITrendResponse } from './shared/models/trend.model';
+import { environment } from '../environments/environment';
 import { catchError } from 'rxjs/operators';
-import {IPopularMovieResponse} from '../shared/models/popular.model';
+import {IPopularMovieResponse} from './shared/models/popular.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HomeService {
+export class TheMovieDBService {
   private baseUrl: string;
   constructor(private http: HttpClient) {
     this.baseUrl = environment.movieAPIUrl;

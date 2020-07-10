@@ -9,11 +9,23 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Bree Serif', sans-serif;
+  background: #081C24;
 }
 a {
   color: white;
   text-decoration: none;
   display: inline-block;
+}
+
+section {
+  background: #081C24;
+  h3 {
+    margin: 0;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: pink;
+  }
 }
 
 .btn-primary {
