@@ -7,6 +7,6 @@ import {IPopularMovie} from '../models/popular.model';
   styleUrls: ['./grid.component.scss']
 })
 export class GridComponent {
-  @Input() popularMovies: IPopularMovie[];
+  @Input() visibleMovies: IPopularMovie[];
   constructor() { }
 }
