@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {HomeService} from './home.service';
+import {ThemoviedbService} from '../themoviedb.service';
 import {ITrend} from '../shared/models/trend.model';
 import {ActivatedRoute} from '@angular/router';
 import {IPopularMovie} from '../shared/models/popular.model';
@@ -12,7 +12,7 @@ import {IPopularMovie} from '../shared/models/popular.model';
 export class HomeComponent implements OnInit {
   trends: ITrend[];
   popularMovies: IPopularMovie[];
-  constructor(private homeService: HomeService,
+  constructor(private homeService: ThemoviedbService,
               private route: ActivatedRoute) {
     this.trends = this.route.snapshot.data.trends;
   }

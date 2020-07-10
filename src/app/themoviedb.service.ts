@@ -9,7 +9,7 @@ import {IPopularMovieResponse} from './shared/models/popular.model';
 @Injectable({
   providedIn: 'root'
 })
-export class TheMovieDBService {
+export class ThemoviedbService {
   private baseUrl: string;
   constructor(private http: HttpClient) {
     this.baseUrl = environment.movieAPIUrl;
