@@ -1,4 +1,4 @@
-@import "../../../utilties/breakpoints";
+@import "../../../../utilties/breakpoints";
 
 header {
   background: #081C24;
@@ -19,7 +19,7 @@ header {
   }
   nav {
     a {
-      color: pink;
+      color: #f48ea0;
       padding-left: 1rem;
       padding-right: 1rem;
     }
@@ -34,7 +34,7 @@ header {
       .brand {
         a {
           padding-bottom: 0;
-          color: pink;
+          color: #f48ea0;
         }
       }
     }

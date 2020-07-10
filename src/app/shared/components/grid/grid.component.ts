@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
-import {IPopularMovie} from '../models/popular.model';
+import {IPopularMovie} from '../../models/popular.model';
 
 @Component({
   selector: 'app-grid',
