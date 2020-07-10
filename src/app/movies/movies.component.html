@@ -1,4 +1,9 @@
 <section class="movies container">
   <h3>Movies</h3>
-  <app-grid [visibleMovies]="movies" *ngIf="movies"></app-grid>
+  <form #movieForm="ngForm" (ngSubmit)="onSubmit()" class="filtering">
+    <label for="search">Name</label>
+    <input type="text" name="search" id="search" [(ngModel)]="searchTerm">
+    <button class="btn-primary btn-sm">Search</button>
+  </form>
+  <app-grid [visibleMovies]="filteredMovies" *ngIf="movies"></app-grid>
 </section>
